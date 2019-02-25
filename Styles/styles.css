@@ -1,0 +1,64 @@
+.pitch {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 40%;		
+	
+	background-image: linear-gradient(0deg, #4dbd33 25%, #43ab2c 25%, #43ab2c 50%, #4dbd33 50%, #4dbd33 75%, #43ab2c 75%, #43ab2c 100%);
+	background-size: 80.00px 80.00px;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+}
+.controls button {
+		margin: 1rem;
+		background: #4dbd33;
+		color: white;
+		border: 0;
+		padding: 0.6rem;
+		font-size: 1.4rem;
+}
+.controls button:hover {
+        background: #43ab2c;
+}
+
+.ball {
+    position: absolute;
+    height: 12px;
+    width: 18px;
+    border-radius: 9px / 6px;
+    background-color: white;
+    display: flex;
+    border: 1px solid black;
+}
+
+.player {
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	border-radius: 500px;
+	
+	border: 3px solid white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;	
+	font-size: 1.3rem;
+}
+
+.attack {
+	background-color: blue;
+}
+.defence {
+	background-color: red;
+}
+
+.frame {
+	display: flex;
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+}
