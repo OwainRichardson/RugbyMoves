@@ -4,58 +4,67 @@ class MoveGenerator {
 		
 		this.moves = {
 			'32 Short': {
-				'1': {
-					'250': ['25px', '0'],
+				'players': {
+					'1': {
+						'250': ['25px', '300px'],
+					},
+					'2': {
+						'250': ['125px', '300px', '0ms'],
+						'1000': ['50px', '480px', '750ms'],
+						'1750': ['125px', '480px', '250ms']
+						
+					},
+					'3': {
+						'250': ['225px', '300px', '0ms'],
+						'1000': ['125px', '500px', '750ms']
+					},
+					'4': {
+						'250': ['325px', '300px', ''],
+						'1000': ['200px', '350px', '750ms'],
+						'2000': ['150px', '700px', '1000ms']
+					},
+					'5': {
+						'250': ['425px', '300px'],
+					},
+					'6': {
+						'250': ['525px', '300px'],
+					},
+					
+					'7': {
+						'250': ['25px', '700px']
+					},
+					'8': {
+						'250': ['125px', '700px'],
+						'1000': ['50px', '580px', '750ms'],
+					},
+					'9': {
+						'250': ['225px', '700px'],
+						'1000': ['125px', '530px', '750ms']					
+					},
+					'10': {
+						'250': ['325px', '700px'],
+					},
+					
+					'11': {
+						'250': ['425px', '700px'],
+					},
+					'12': {
+						'250': ['525px', '700px'],
+					},
+					'ball': {
+						'250': ['225px', '325px', '0ms'],
+						'1000': ['125px', '525px', '750ms'],
+						'1750': ['125px', '500px', '1ms'],
+						'2100': ['185px', '499px', '250ms'],
+						'2350': ['150px', '725px', '650ms']
+					}
 				},
-				'2': {
-                    '250': ['125px', '0', '0ms'],
-                    '1000': ['50px', '180px', '750ms'],
-                    '1750': ['125px', '180px', '250ms']
-                    
-				},
-				'3': {
-                    '250': ['225px', '0', '0ms'],
-                    '1000': ['125px', '200px', '750ms']
-                },
-                '4': {
-                    '250': ['325px', '0', ''],
-                    '1000': ['200px', '50px', '750ms'],
-                    '2000': ['150px', '400px', '1000ms']
-				},
-				'5': {
-					'250': ['425px', '0'],
-				},
-				'6': {
-					'250': ['525px', '0'],
-                },
-                
-                '7': {
-                    '250': ['25px', '1000px']
-                },
-                '8': {
-                    '250': ['125px', '1000px'],
-                    
-				},
-				'9': {
-                    '250': ['225px', '1000px'],
-                },
-                '10': {
-                    '250': ['325px', '1000px'],
-                },
-                
-				'11': {
-					'250': ['425px', '1000px'],
-				},
-				'12': {
-					'250': ['525px', '1000px'],
-                },
-                'ball': {
-                    '250': ['225px', '25px', '0ms'],
-                    '1000': ['125px', '225px', '750ms'],
-                    '1750': ['125px', '200px', '1ms'],
-                    '2100': ['185px', '199px', '250ms'],
-                    '2350': ['150px', '425px', '650ms']
-                }
+				'description': `<ul>
+									<li>Mid drags his opposite mid out wide</li>
+									<li>Link mirrors the line to drags his opposite link out too</li>
+									<li>When the touch on the mid is imminentm the link goes to half</li>
+									<li>The other attacking mid runs a short line through the hole left by the mid</li>
+								</ul>`
 			}
 		}
 		
@@ -63,10 +72,22 @@ class MoveGenerator {
 	}
 	
 	bindEvents() {
-		document.querySelectorAll('.controls button').forEach((el) => {
-			el.addEventListener('click', (event) => {
+		document.querySelectorAll('.move-selector').forEach((el) => {
+			el.addEventListener('change', (event) => {
 				this.resetPitch()
-				this.renderPlayers(event)
+				this.changeDescription(event.target.value)
+				this.renderPlayers(event.target.value)
+			})
+		})
+
+		document.querySelectorAll('.play').forEach((el) => {
+			el.addEventListener('click', () => {
+
+				var move = $('.move-selector').val()
+
+				this.resetPitch()
+				this.changeDescription(move)
+				this.renderPlayers(move)
 			})
 		})
 	}	
@@ -76,7 +97,7 @@ class MoveGenerator {
 	}
 	
 	renderPlayers(event) {
-		const players = this.moves[event.target.getAttribute('data-id')]
+		const players = this.moves[event].players
 		
 		Object.keys(players).forEach(key => {
 			const player = document.createElement('div')
@@ -90,6 +111,12 @@ class MoveGenerator {
 			
 			this.startAnimation(players[key], player)
 		})
+	}
+
+	changeDescription(event) {
+		const description = this.moves[event].description
+		
+		$('.description').html(description);
 	}
 	
 	startAnimation(moves, player) {

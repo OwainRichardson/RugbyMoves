@@ -62,3 +62,19 @@
 	max-width: 1440px;
 	margin: auto;
 }
+
+ul {
+	list-style: disc;
+	list-style-position: inside;
+	margin: 1rem;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+select {
+	margin: 1rem;
+	padding: 1rem;
+	border-radius: 5px;
+}
