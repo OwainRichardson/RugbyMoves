@@ -204,7 +204,7 @@ class MoveGenerator {
 				'description': `<ul>
 									<li>Mid drags his opposite mid out wide</li>
 									<li>Other mid hits a line inbetween the 2 opposing mids, receives the ball and takes the touch</li>
-									<li>The first mid goes to half and passes to the link running a sweet line</li>
+									<li>The first mid goes to half and passes to the link running a sweep line</li>
 									<li>This creates a 3-on-2 on the outside and passes through the hands should be enough</li>
 								</ul>`
 			}
