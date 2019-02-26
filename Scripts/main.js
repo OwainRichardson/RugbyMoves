@@ -203,11 +203,9 @@ class MoveGenerator {
 				},
 				'description': `<ul>
 									<li>Mid drags his opposite mid out wide</li>
-									<li>Link mirrors the line to drags his opposite link out too</li>
-									<li>When the touch on the mid is imminentm the link goes to half</li>
-									<li>The other attacking mid runs a short line through the hole left by the mid</li>
-									<li>The link runs a loop around the short line mid</li>
-									<li><strong>If</strong> the opposing mid shuts the gap the mid passes to the link running the loop line</li>
+									<li>Other mid hits a line inbetween the 2 opposing mids, receives the ball and takes the touch</li>
+									<li>The first mid goes to half and passes to the link running a sweet line</li>
+									<li>This creates a 3-on-2 on the outside and passes through the hands should be enough</li>
 								</ul>`
 			}
 		}
