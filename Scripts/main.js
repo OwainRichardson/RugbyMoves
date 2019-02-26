@@ -134,6 +134,81 @@ class MoveGenerator {
 									<li>The link runs a loop around the short line mid</li>
 									<li><strong>If</strong> the opposing mid shuts the gap the mid passes to the link running the loop line</li>
 								</ul>`
+			},
+			'Sweep': {
+				'players': {
+					'1': {
+						'250': ['25px', '300px'],
+					},
+					'2': {
+						'250': ['125px', '300px', '0ms'],
+						'1600': ['350px', '475px', '1000ms'],
+						'2600': ['360px', '550px', '300ms'],
+						'2900': ['360px', '750px', '750ms'],
+					},
+					'3': {
+						'250': ['225px', '300px', '0ms'],
+						'500': ['175px', '400px', '500ms'],
+						'1000': ['150px', '500px', '500ms'],
+						'1500': ['260px', '575px', '800ms']
+					},
+					'4': {
+						'250': ['325px', '300px', ''],
+						'1000': ['280px', '475px', '600ms'],
+						'1600': ['260px', '600px', '500ms']
+					},
+					'5': {
+						'250': ['425px', '300px'],
+						'2000': ['460px', '700px', '1750ms'],
+						'3750': ['460px', '900px', '600ms'],
+					},
+					'6': {
+						'250': ['525px', '300px'],
+					},
+					
+					'7': {
+						'250': ['25px', '700px']
+					},
+					'8': {
+						'250': ['125px', '700px'],
+					},
+					'9': {
+						'250': ['225px', '700px'],
+						'500': ['175px', '570px', '750ms']
+					},
+					'10': {
+						'250': ['325px', '700px'],
+						'1600': ['260px', '630px', '500ms']
+					},
+					
+					'11': {
+						'250': ['425px', '700px'],
+						'2900': ['375px', '800px', '500ms'],
+					},
+					'12': {
+						'250': ['525px', '700px'],
+					},
+					'ball': {
+						'250': ['225px', '325px', '0ms'],
+						'500': ['175px', '425px', '500ms'],
+						'1000': ['150px', '525px', '500ms'],
+						'1400': ['290px', '490px', '200ms'],
+						'1600': ['260px', '625px', '500ms'],
+						'2100': ['260px', '600px', '1ms'],
+						'2600': ['360px', '575px', '300ms'],
+						'2900': ['360px', '775px', '750ms'],
+						'3550': ['460px', '725px', '200ms'],
+						'3750': ['460px', '925px', '600ms'],
+					}
+				},
+				'description': `<ul>
+									<li>Mid drags his opposite mid out wide</li>
+									<li>Link mirrors the line to drags his opposite link out too</li>
+									<li>When the touch on the mid is imminentm the link goes to half</li>
+									<li>The other attacking mid runs a short line through the hole left by the mid</li>
+									<li>The link runs a loop around the short line mid</li>
+									<li><strong>If</strong> the opposing mid shuts the gap the mid passes to the link running the loop line</li>
+								</ul>`
 			}
 		}
 		
